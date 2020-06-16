@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubowen7.github.io/"/>
-  <updated>2020-06-16T01:42:56.402Z</updated>
+  <updated>2020-06-16T02:25:10.819Z</updated>
   <id>https://hubowen7.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hubowen7.github.io/2020/06/15/hello-world/"/>
     <id>https://hubowen7.github.io/2020/06/15/hello-world/</id>
     <published>2020-06-15T05:56:58.550Z</published>
-    <updated>2020-06-16T01:42:56.402Z</updated>
+    <updated>2020-06-16T02:25:10.819Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到송하나的Blog，在这里想分享一下自己在未来一段时间自学过程中解决和未解决的的疑问和难题，希望可以与大家交流分享。</p><p>本Blog是以Hexo为框架搭建，在搭建博客时。</p>]]></content>
     
@@ -39,6 +39,10 @@
     
       <category term="Java" scheme="https://hubowen7.github.io/categories/Java/"/>
     
+    
+      <category term="Hexo" scheme="https://hubowen7.github.io/tags/Hexo/"/>
+    
+      <category term="网站" scheme="https://hubowen7.github.io/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   

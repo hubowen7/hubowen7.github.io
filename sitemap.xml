@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hubowen7.github.io/2020/06/15/hello-world/</loc>
-    
-    <lastmod>2020-06-16T01:42:56.402Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hubowen7.github.io/tags/index.html</loc>
     
-    <lastmod>2020-06-15T12:05:37.061Z</lastmod>
+    <lastmod>2020-06-16T02:26:12.133Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://hubowen7.github.io/categories/Java.html</loc>
+    <loc>https://hubowen7.github.io/2020/06/15/hello-world/</loc>
     
-    <lastmod>2020-06-15T12:04:13.974Z</lastmod>
+    <lastmod>2020-06-16T02:25:10.819Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://hubowen7.github.io/categories/Python.html</loc>
     
-    <lastmod>2020-06-15T12:03:04.546Z</lastmod>
+    <lastmod>2020-06-16T02:16:46.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hubowen7.github.io/categories/Java.html</loc>
+    
+    <lastmod>2020-06-16T02:15:31.524Z</lastmod>
     
   </url>
   
