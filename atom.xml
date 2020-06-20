@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hubowen7.github.io/"/>
-  <updated>2020-06-20T02:11:07.737Z</updated>
+  <updated>2020-06-20T02:36:33.207Z</updated>
   <id>https://hubowen7.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo配置主题Concise及新建等操作</title>
+    <link href="https://hubowen7.github.io/2020/06/20/Hexo%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Concise%E5%8F%8A%E6%96%B0%E5%BB%BA%E7%AD%89%E6%93%8D%E4%BD%9C/"/>
+    <id>https://hubowen7.github.io/2020/06/20/Hexo%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Concise%E5%8F%8A%E6%96%B0%E5%BB%BA%E7%AD%89%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-06-20T02:23:18.000Z</published>
+    <updated>2020-06-20T02:36:33.207Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="建站说明"><a href="#建站说明" class="headerlink" title="建站说明"></a>建站说明</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;建站说明&quot;&gt;&lt;a href=&quot;#建站说明&quot; class=&quot;headerlink&quot; title=&quot;建站说明&quot;&gt;&lt;/a&gt;建站说明&lt;/h2&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="https://hubowen7.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://hubowen7.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="https://hubowen7.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何使用Hexo+Github搭建个人博客网站</title>
     <link href="https://hubowen7.github.io/2020/06/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/"/>
     <id>https://hubowen7.github.io/2020/06/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</id>
     <published>2020-06-15T05:56:58.550Z</published>
-    <updated>2020-06-20T02:11:07.737Z</updated>
+    <updated>2020-06-20T02:35:18.651Z</updated>
     
     <content type="html"><![CDATA[<h2 id="建站说明"><a href="#建站说明" class="headerlink" title="建站说明"></a>建站说明</h2><p>欢迎来到송하나的Blog，在这里想分享和记录一下自己在未来一段时间自学过程中解决和未解决的的疑问和难题，希望可以与大家交流分享，给大家带来一些帮助，也欢迎大家的批评与指正。  </p><a id="more"></a><p>本站是以Hexo为框架搭建，本篇博客主要想讲一下建站的整体流程和步骤，主要分两步。  </p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="下载并安装Node-js"><a href="#下载并安装Node-js" class="headerlink" title="下载并安装Node.js"></a>下载并安装Node.js</h3><p>下载<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，按照步骤安装完毕即可。<br>Node.js是Hexo博客框架用的依赖，本博客安装的是Node-v12.18.0。  </p><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>下载<a href="https://gitforwindows.org/" target="_blank" rel="noopener">Git</a>，按照步骤安装完毕即可。<br>Git是一种版本控制的工具，可以方便地将本地库与远程库（Github）进行链接。  </p><p>Git比较好的学习网站<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的Git教程</a></p><h3 id="Hexo的安装与配置"><a href="#Hexo的安装与配置" class="headerlink" title="Hexo的安装与配置"></a>Hexo的安装与配置</h3><p>（1）在本地新建一个任意名称的文件夹，用于存放自己的博客内容。<br>（2）进入该文件夹点击鼠标右键，选择Git Bash here（如果Git安装成功）<br>（3）在Git Bash的命令行窗口输入以下命令来安装Hexo：<br><code>npm install -g hexo-cli</code><br>（4）输入以下命令初始化Hexo（我的博客文件夹名称为myblog，需要注意的在进行初始化时可能安装主题会出现安装失败的现象，可以在themes文件夹里自行在Github上下载主题）：<br><code>hexo init myblog</code><br>（5）输入以下命令进入myblog文件夹：<br><code>cd myblog</code><br>（6）输入以下命令安装依赖:<br><code>npm install</code><br>（7）输入以下命令本地运行：<br><code>hexo g</code><br>（8）输入以下命令进行博客预览（复制网址并粘贴进行预览）:<br><code>hexo s</code>  </p><h2 id="将博客部署到Github上"><a href="#将博客部署到Github上" class="headerlink" title="将博客部署到Github上"></a>将博客部署到Github上</h2><p>（需要注意在进行这一步操作之前需要用文本编辑器将本地的myblog文件夹打开）<br>（1）在Github新建账户并新建一个Repository，教程可参考：<a href="https://help.github.com/cn" target="_blank" rel="noopener">Github帮助</a>；<br>（2）将新建的Repository的HTTPS网址clone下来，并对<code>../myblog/_config.yml</code>的<code>deploy:</code>部分进行修改（在<code>type:</code>后输入git，<code>repo:</code>后输入你的Repository网址，<code>branch:</code>后输入<code>master</code>）；<br>（3）在myblog文件夹右键选择Git Bash here输入以下命令配置Git个人信息：<br><code>git config --global user.name &quot;Github用户名&quot;       //自己Github的账号名</code><br><code>git config --global user.email &quot;Github邮箱&quot;        //自己注册Github的邮箱地址</code><br>（4）生成SSH KEY，Github也是利用该密钥与本地库链接，在命令行窗口输入以下命令生成SSH KEY：<br><code>ssh-keygen -t rsa -C  &quot;Github邮箱&quot;        //自己注册Github的邮箱地址</code><br>（5）运行成功之后在本地C盘目录查找.ssh目录下的id_rsa.pub文件，用记事本打开后复制该文件的内容；<br>（6）在Github中点击自己的头像，打开Settings，并在SSH and GPG keys目录下的Key栏粘贴复制的文件的内容；<br>（7）配置SSH KEY成功之后，在命令行继续输入以下命令安装hexo-deployer-git插件：<br><code>npm install hexo-deployer-git --save</code><br>（8）输入以下命令完成Hexo在Github上的部署（此处同样可以先输入<code>hexo s</code>进行预览）：<br><code>hexo g</code><br><code>hexo d</code>  </p><h2 id="参考文档及网站"><a href="#参考文档及网站" class="headerlink" title="参考文档及网站"></a>参考文档及网站</h2><p><a href="https://winney07.github.io/2018/08/01/Hexo-GitHub-Pages-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">Hexo + GitHub Pages 搭建个人博客</a><br><a href="http://blog.asroads.com/post/3afcd4a3.html" target="_blank" rel="noopener">怎么用HEXO+github搭建个人博客网站</a><br><a href="https://www.bilibili.com/video/BV1cW411A7Jx?p=1" target="_blank" rel="noopener">手把手教你搭建属于自己的hexo+github博客</a>  </p>]]></content>
     
