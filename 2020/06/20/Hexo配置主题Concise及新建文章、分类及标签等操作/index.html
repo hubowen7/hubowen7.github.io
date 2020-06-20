@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+
+    
+
+    
+
+    <title>Hexo配置主题Concise及新建文章、分类及标签等操作 | 송하나的学习Blog</title>
+    <meta name="author" content="Bowenhu7" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Markdown说明Markdown是一种轻量级的标记语言，可以使用户使用简单的纯文本格式编写文档，其后缀一般为.md或.markdown，当前有包括Github等许多网站都是用Markdown来撰写帮助文档。Markdown语法比较好的教程有Markdown教程  Concise主题关于博客的建站工作已经在此篇博文如何使用Hexo+Github搭建个人博客网站中提到，本篇博文主要讲一下如何配置Concise主题及利用博客撰写新的博文、添加分类及标签等操作。  Concise主..." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+    
+    <link rel="alternate" href="/atom.xml" title="송하나的学习Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/images/icon.jpg">
+    
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'icomoon';
+        src: url("/fonts/icomoon.eot?q628ml");
+        src: url("/fonts/icomoon.eot?q628ml#iefix") format('embedded-opentype'),
+             url("/fonts/icomoon.ttf?q628ml") format('truetype'),
+             url("/fonts/icomoon.woff?q628ml") format('woff'),
+             url("/fonts/icomoon.svg?q628ml#icomoon") format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    </style>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!--[if lt IE 9]><style type="text/css">.nav-inner {top:0;}.author-meta {position:static;top:0;}.search-form {height:36px;}</style><script type="text/javascript" src="https://unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+
+    <main class="app">
+        <header id="header" class="header clearfix">
+    <div id="nav" class="nav">
+    <div class="nav-mobile">
+        <button id="open-panel" class="open-panel nav-mobile-item"><i class="icon-documents"></i></button>
+        <h1 class="nav-mobile-title nav-mobile-item">송하나的学习Blog</h1>
+        <button id="open-menus" class="open-panel nav-mobile-item"><i class="icon-library"></i></button>
+    </div>
+
+    <nav id="nav-inner" class="nav-inner">
+        
+            <a class="nav-item" href="/">
+                <span class="nav-text">首页</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/Python/">
+                <span class="nav-text">Python</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/Java/">
+                <span class="nav-text">Java</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">
+                <span class="nav-text">计算机体系结构</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/Hexo/">
+                <span class="nav-text">Hexo</span>
+            </a>
+        
+            <a class="nav-item" href="/categories/%E6%95%B0%E5%AD%A6/">
+                <span class="nav-text">数学</span>
+            </a>
+        
+            <a class="nav-item" href="/tags/">
+                <span class="nav-text">标签</span>
+            </a>
+        
+            <a class="nav-item" href="/archives/">
+                <span class="nav-text">归档</span>
+            </a>
+        
+            <a class="nav-item" href="/about/">
+                <span class="nav-text">关于</span>
+            </a>
+        
+    </nav>
+</div>
+
+    <aside id="aside" class="aside">
+    <div id="aside-mask" class="aside-mask"></div>
+    <div id="aside-inner" class="aside-inner">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"><i class="icon-search-stroke"></i></button><input type="hidden" name="sitesearch" value="https://hubowen7.github.io"></form>
+
+        
+        
+        
+        
+
+        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown说明"><span class="toc-number">1.</span> <span class="toc-text">Markdown说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Concise主题"><span class="toc-number">2.</span> <span class="toc-text">Concise主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Concise主题介绍"><span class="toc-number">2.1.</span> <span class="toc-text">Concise主题介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Concise主题配置"><span class="toc-number">2.2.</span> <span class="toc-text">Concise主题配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档及网站"><span class="toc-number">3.</span> <span class="toc-text">参考文档及网站</span></a></li></ol>
+        
+    </div>
+</aside>
+
+</header>
+
+        <div id="content" class="content">
+            <div id="wrapper" class="wrapper" style="max-width: 800px">
+                <article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            Hexo配置主题Concise及新建文章、分类及标签等操作
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="https://hubowen7.github.io/2020/06/20/Hexo%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Concise%E5%8F%8A%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E3%80%81%E5%88%86%E7%B1%BB%E5%8F%8A%E6%A0%87%E7%AD%BE%E7%AD%89%E6%93%8D%E4%BD%9C/index.html">
+    
+    <i class="icon-calendar vm"></i>
+    
+    <time class="vm" datetime="2020-06-20T02:23:18.000Z" itemprop="datePublished">2020-06-20</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag vm"></i>
+    <a class="article-tag-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="article-tag-link" href="/tags/Markdown/" rel="tag">Markdown</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <h2 id="Markdown说明"><a href="#Markdown说明" class="headerlink" title="Markdown说明"></a>Markdown说明</h2><p>Markdown是一种轻量级的标记语言，可以使用户使用简单的纯文本格式编写文档，其后缀一般为<code>.md</code>或<code>.markdown</code>，当前有包括Github等许多网站都是用Markdown来撰写帮助文档。<br>Markdown语法比较好的教程有<a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">Markdown教程</a>  </p>
+<a id="more"></a>
+
+
+
+<h2 id="Concise主题"><a href="#Concise主题" class="headerlink" title="Concise主题"></a>Concise主题</h2><p>关于博客的建站工作已经在此篇博文<a href="https://hubowen7.github.io/2020/06/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">如何使用Hexo+Github搭建个人博客网站</a>中提到，本篇博文主要讲一下如何配置Concise主题及利用博客撰写新的博文、添加分类及标签等操作。  </p>
+<h3 id="Concise主题介绍"><a href="#Concise主题介绍" class="headerlink" title="Concise主题介绍"></a>Concise主题介绍</h3><p><a href="https://github.com/sanonz/hexo-theme-concise" target="_blank" rel="noopener">Concise</a>是由Github上的一位博主开发的简约主题，可以支持PC、平板和手机等设备。  </p>
+<h3 id="Concise主题配置"><a href="#Concise主题配置" class="headerlink" title="Concise主题配置"></a>Concise主题配置</h3><p>（1）首先在你的博客的文件夹点击鼠标右键，选择Git Bash here，输入以下命令行在<code>.../themes</code>文件夹添加Concise主题：  </p>
+<figure class="highlight plain"><figcaption><span>Bash</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:sanonz&#x2F;hexo-theme-concise.git themes&#x2F;concise</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（2）在&#96;_config.yml&#96;文件中修改以下代码：  </span><br><span class="line">&#96;&#96;&#96;yml</span><br><span class="line">theme: concise</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（3）在命令行窗口输入以下命令将Hexo默认的编译器切换为[hexo-renderer-less](https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo-renderer-less)：  </span><br><span class="line">&#96;&#96;&#96;Git Bash</span><br><span class="line">npm install hexo-renderer-less --save</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（4）清除缓存，预览博客并重新部署：  </span><br><span class="line">&#96;&#96;&#96;Git Bash</span><br><span class="line">hexo clean</span><br><span class="line">hexo s</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 在Concise主题中添加分类、标签  </span><br><span class="line">（1）复制&#96;...&#x2F;themes&#x2F;concise&#x2F;_config.example.yml&#96;文件并在该文件夹下粘贴重命名为&#96;...&#x2F;_config.yml&#96;；  </span><br><span class="line">（2）修改&#96;...&#x2F;_config.yml&#96;中一些配置，具体的修改参见[Concise](https:&#x2F;&#x2F;github.com&#x2F;sanonz&#x2F;hexo-theme-concise)；  </span><br><span class="line">（3）在文件夹点击鼠标右键，选择Git Bash here，输入以下命令行添加新的分类：  </span><br><span class="line">&#96;&#96;&#96;Git Bash</span><br><span class="line">hexo new page categories</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（4）在&#96;...&#x2F;source&#x2F;categories&#96;文件夹下找到新建的&#96;index.md&#96;文件，打开之后默认内容为：  </span><br><span class="line">&#96;&#96;&#96;Markdown</span><br><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2020-06-15 11:03:08</span><br><span class="line">---</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（5）添加&#96;type: &quot;categories&quot;&#96;，修改完毕后内容为（以我的分类Hexo为例）：  </span><br><span class="line">&#96;&#96;&#96;Markdown</span><br><span class="line">---</span><br><span class="line">title: Hexo</span><br><span class="line">date: 2020-06-15 11:03:08</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（6）在文件夹点击鼠标右键，选择Git Bash here，输入以下命令行添加新的标签：  </span><br><span class="line">&#96;&#96;&#96;Git Bash</span><br><span class="line">hexo new page tags</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（7）在&#96;...&#x2F;source&#x2F;tags&#96;文件夹下找到新建的&#96;index.md&#96;文件，打开之后默认内容为：  </span><br><span class="line">&#96;&#96;&#96;Markdown</span><br><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2020-06-15 13:47:40</span><br><span class="line">---</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（8）添加&#96;type: &quot;tags&quot;&#96;和&#96;layout: tags&#96;，修改完毕后内容为（以我的分类Hexo为例）：  </span><br><span class="line">&#96;&#96;&#96;Markdown</span><br><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2020-06-16 10:25:56</span><br><span class="line">layout: tags</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（9）在命令行输入以下命令新建博文：  </span><br><span class="line">&#96;&#96;&#96;Git Bash</span><br><span class="line">hexo new &quot;博文名&quot;</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">（10）为新建的博文添加分类及标签（以我的博文为例）：  </span><br><span class="line">&#96;&#96;&#96;Markdown</span><br><span class="line">---</span><br><span class="line">title: 如何使用Hexo+Github搭建个人博客网站</span><br><span class="line">categories: </span><br><span class="line">- Hexo</span><br><span class="line">tags:</span><br><span class="line">- Hexo</span><br><span class="line">- Github</span><br><span class="line">- Node.js</span><br><span class="line">---</span><br><span class="line">&#96;&#96;&#96;  </span><br><span class="line">其中分类为&#96;Hexo&#96;，标签有&#96;Hexo&#96;，&#96;Github&#96;和&#96;Node.js&#96;。  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 注意事项   </span><br><span class="line">在添加完分类之后，需要在&#96;...&#x2F;_config.yml&#96;文件的&#96;menu:&#96;处对添加的分类路径进行添加（以我的博客为例）：  </span><br><span class="line">&#96;&#96;&#96;Markdown</span><br><span class="line">  首页: &#x2F;</span><br><span class="line">  Hexo: &#x2F;categories&#x2F;Hexo&#x2F;</span><br><span class="line">  标签: &#x2F;tags&#x2F;</span><br><span class="line">  归档: &#x2F;archives&#x2F;</span><br><span class="line">  关于: &#x2F;about&#x2F;</span><br></pre></td></tr></table></figure>
+<p>添加了<code>Hexo</code>这一分类。</p>
+<h2 id="参考文档及网站"><a href="#参考文档及网站" class="headerlink" title="参考文档及网站"></a>参考文档及网站</h2><ul>
+<li><a href="https://github.com/sanonz/hexo-theme-concise" target="_blank" rel="noopener">Concise</a>  </li>
+</ul>
+<ul>
+<li><a href="https://sanonz.github.io/2017/hello-world/#%E4%BB%80%E4%B9%88%E6%98%AF-Markdown" target="_blank" rel="noopener">Hexo 搭建静态博客与 hexo-theme-concise 主题使用教程</a>  </li>
+</ul>
+
+        
+    </section>
+</article>
+
+
+
+<a id="pagenext" href="/2020/06/15/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" class="article-next" title="如何使用Hexo+Github搭建个人博客网站"><i class="icon-arrow-right"></i></a>
+
+
+
+
+<div class="comments">
+    <div id="comments"></div>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+    new Gitalk({
+        clientID: "7fbe80427f54741e289f",
+        clientSecret: "f34ed5fd92e54c9000bd37ba951948cb939deff5",
+        repo: "hubowen7.github.io",
+        owner: "hubowen",
+        admin: ["hubowen"],
+        id: "2020/06/20/Hexo配置主题Concise及新建文章、分类及标签等操作",
+        distractionFreeMode: true,
+        title: "Hexo配置主题Concise及新建文章、分类及标签等操作",
+        body: "https://hubowen7.github.io/2020/06/20/Hexo%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Concise%E5%8F%8A%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E3%80%81%E5%88%86%E7%B1%BB%E5%8F%8A%E6%A0%87%E7%AD%BE%E7%AD%89%E6%93%8D%E4%BD%9C/",
+        labels: ["Hexo","Markdown"]
+    }).render('comments');
+    </script>
+</div>
+
+
+            </div>
+        </div>
+        <footer class="footer">
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, Theme by <a href="https://github.com/sanonz/hexo-theme-concise" target="_blank">Concise</a>
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e4027971a230b210f4671f485b33846a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    
+</footer>
+
+    </main>
+
+    <script type="text/javascript" src="https://unpkg.com/jquery@1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var nodes = {
+            nav: $('#nav'),
+            aside: $('#aside'),
+            asideInner: $('#aside-inner'),
+            navInner: $('#nav-inner')
+        };
+
+        var doing = false;
+        nodes.asideInner.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+            if (nodes.aside.hasClass('mobile-open')) {
+                nodes.aside.removeClass('mobile-open');
+            } else {
+                nodes.aside.removeClass('mobile-close panel-show');
+            }
+            doing = false;
+        });
+        $('#open-panel, #aside-mask').on('click', function() {
+            if (doing) {
+                return;
+            }
+
+            if (nodes.aside.hasClass('panel-show')) {
+                nodes.aside.addClass('mobile-close');
+            } else {
+                nodes.aside.addClass('mobile-open panel-show');
+            }
+        });
+        $('#open-menus').on('click', function() {
+            nodes.navInner.slideToggle('normal', slideDone);
+        });
+
+        if (window.innerWidth <= 960) {
+            setTimeout(function() {
+                nodes.navInner.slideUp('normal', slideDone);
+            }, 3000);
+        }
+
+        function slideDone() {
+            if (nodes.navInner.css('display') !== 'none') {
+                nodes.navInner.css('display', '');
+            }
+        }
+
+        $(window).on('resize', function() {
+            console.log($(this).width())
+            if ($(this).width() > 960) {
+                nodes.navInner.css('display', '');
+            }
+        });
+    });
+    </script>
+    
+        
+<script src="/js/scrollspy.min.js"></script>
+
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
+        </script>
+    
+
+</body>
+</html>
