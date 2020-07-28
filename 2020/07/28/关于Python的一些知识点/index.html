@@ -10,7 +10,7 @@
     <title>关于Python的一些知识点 | 송하나的学习Blog</title>
     <meta name="author" content="Bowenhu7" />
     <meta name="keywords" content="" />
-    <meta name="description" content="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点一本面向新手比较友好的书籍  关于继承的若干问题在编写类时，使用继承可以使子类自动获得父类的所有属性和方法，同时子类也可以定义自己的属性和方法。在此想记录两点关于子类继承父类时需要注意的问题（此处以父类Cat和子类WhiteCat为例）：  （1）在定义子类时，首先需要在子类的括号内指定父类的名称，并使用方法__init__()来接受创建父类实例的信息。同时需要使用super()函数来将父类和子类关联起来，具体的代..." />
+    <meta name="description" content="在学习《Python编程：从入门到实践》时想记录下来的若干知识点一本面向新手比较友好的书籍  关于继承的若干问题在编写类时，使用继承可以使子类自动获得父类的所有属性和方法，同时子类也可以定义自己的属性和方法。在此想记录两点关于子类继承父类时需要注意的问题（此处以父类Cat和子类WhiteCat为例）：  （1）在定义子类时，首先需要在子类的括号内指定父类的名称，并使用方法__init__()来接受创建父类实例的信息。同时需要使用super()函数来将父类和子类关联起来，具体的代码示..." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
@@ -102,7 +102,7 @@
         
 
         
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"><span class="toc-number">1.</span> <span class="toc-text">在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于继承的若干问题"><span class="toc-number">1.1.</span> <span class="toc-text">关于继承的若干问题</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#在学习《Python编程：从入门到实践》时想记录下来的若干知识点"><span class="toc-number">1.</span> <span class="toc-text">在学习《Python编程：从入门到实践》时想记录下来的若干知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于继承的若干问题"><span class="toc-number">2.</span> <span class="toc-text">关于继承的若干问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于重构的若干问题"><span class="toc-number">3.</span> <span class="toc-text">关于重构的若干问题</span></a></li></ol>
         
     </div>
 </aside>
@@ -139,10 +139,10 @@
     
     <section class="article-body markdown-body">
         
-        <h2 id="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"><a href="#在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点" class="headerlink" title="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"></a>在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点</h2><p>一本面向新手比较友好的<a href="https://book.douban.com/subject/26829016/" target="_blank" rel="noopener">书籍</a>  </p>
+        <h2 id="在学习《Python编程：从入门到实践》时想记录下来的若干知识点"><a href="#在学习《Python编程：从入门到实践》时想记录下来的若干知识点" class="headerlink" title="在学习《Python编程：从入门到实践》时想记录下来的若干知识点"></a>在学习《Python编程：从入门到实践》时想记录下来的若干知识点</h2><p>一本面向新手比较友好的<a href="https://book.douban.com/subject/26829016/" target="_blank" rel="noopener">书籍</a>  </p>
 <a id="more"></a>
 
-<h3 id="关于继承的若干问题"><a href="#关于继承的若干问题" class="headerlink" title="关于继承的若干问题"></a>关于继承的若干问题</h3><p>在编写类时，使用继承可以使子类自动获得父类的所有属性和方法，同时子类也可以定义自己的属性和方法。在此想记录两点关于子类继承父类时需要注意的问题（此处以父类Cat和子类WhiteCat为例）：  </p>
+<h2 id="关于继承的若干问题"><a href="#关于继承的若干问题" class="headerlink" title="关于继承的若干问题"></a>关于继承的若干问题</h2><p>在编写类时，使用继承可以使子类自动获得父类的所有属性和方法，同时子类也可以定义自己的属性和方法。在此想记录两点关于子类继承父类时需要注意的问题（此处以父类Cat和子类WhiteCat为例）：  </p>
 <p>（1）在定义子类时，首先需要在子类的括号内指定父类的名称，并使用方法<code>__init__()</code>来接受创建父类实例的信息。同时需要使用<code>super()</code>函数来将父类和子类关联起来，具体的代码示例如下：  </p>
 <pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">WhiteCat</span><span class="params">(Cat)</span>:</span>  
      <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, year, price)</span>:</span>  
@@ -154,7 +154,60 @@
 
      <span class="function"><span class="keyword">def</span> <span class="title">buy_cat</span><span class="params">(self)</span>:</span>
          print(<span class="string">'A WhiteCat is more expensive than a normal cat'</span>)  </code></pre>
-<p>此时如果有人对白猫调用方法<code>buy_cat()</code>，Python将忽略父类中的该方法，转而使用子类中的该方法。</p>
+<p>此时如果有人对白猫调用方法<code>buy_cat()</code>，Python将忽略父类中的该方法，转而使用子类中的该方法。  </p>
+<h2 id="关于重构的若干问题"><a href="#关于重构的若干问题" class="headerlink" title="关于重构的若干问题"></a>关于重构的若干问题</h2><p>重构是将代码划分为一系列完成简单具体工作的函数，在确保代码可以正确运行的前提下，使用重构可以使代码更加清晰、更易于理解。（此处以本书中一个问候用户的代码为例）：  </p>
+<p>（1）重构之前原代码如下：  </p>
+<pre><code class="python"><span class="keyword">import</span> json
+
+<span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span>
+     filename = <span class="string">'username.json'</span>
+
+     <span class="keyword">try</span>:
+         <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:
+             username = json.load(f_obj)
+     <span class="keyword">except</span> FileNotFoundError:
+         username = input(<span class="string">"What's your name?"</span>)
+         <span class="keyword">with</span> open(filename, <span class="string">'w'</span>) <span class="keyword">as</span> f_obj:
+             json.dump(username, fobj)
+             print(<span class="string">"We'll remember you when you come back,"</span> + username + <span class="string">"!"</span>)
+     <span class="keyword">else</span>:
+         print(<span class="string">"Welcome back,"</span> + username +<span class="string">"!"</span>)
+
+greet_user()  </code></pre>
+<p>此代码可以根据文件名加载数据，如果文件名错误，触发异常<code>FileNotFoundError</code>，使用户可以自行输入数据并将数据写入模块json。  </p>
+<p>（2）重构之后的代码如下：  </p>
+<pre><code class="python"><span class="keyword">import</span> json
+
+<span class="function"><span class="keyword">def</span> <span class="title">get_stored_username</span><span class="params">()</span>:</span>
+     filename = <span class="string">'username.json'</span>
+
+     <span class="keyword">try</span>:
+         <span class="keyword">with</span> open(filename) <span class="keyword">as</span> f_obj:
+             username = json.load(f_obj)
+     <span class="keyword">except</span> FileNotFoundError:
+         <span class="keyword">return</span> <span class="literal">None</span>
+     <span class="keyword">else</span>:
+         <span class="keyword">return</span> username
+
+<span class="function"><span class="keyword">def</span> <span class="title">get_new_username</span><span class="params">()</span>:</span>
+     username = input(<span class="string">"What's your name?"</span>)
+     filename = <span class="string">'username.json'</span>  
+
+     <span class="keyword">with</span> open (filename, <span class="string">'w'</span>) <span class="keyword">as</span> f_obj:
+         json.dump(username, f_obj)
+     <span class="keyword">return</span> username
+
+<span class="function"><span class="keyword">def</span> <span class="title">greet_user</span><span class="params">()</span>:</span>
+     username = get_stored_username()
+
+     <span class="keyword">if</span> username:
+         print(<span class="string">"Welcome back,"</span> + username + <span class="string">"!"</span>)
+     <span class="keyword">else</span>:
+         username = get_new_username()
+         print(<span class="string">"We'll remember you when you come back,"</span> + username + <span class="string">"!"</span>)
+
+greet_user()</code></pre>
+<p>重构之后的代码之中，第一个<code>get_stored_username()</code>之中，如果存储了用户名，这个函数就会获取该用户名并将返回值设为该用户名；如果文件<code>username.json</code>不存在，这个函数就返回<code>None</code>。第二个函数可以提示用户输入用户名，此函数只负责获取并存储新用户的用户名。当我们调用最后一个函数时，该函数要么调用函数<code>get_stored_username()</code>欢迎老用户回来，要么调用第二个函数<code>get_new_username()</code>问候新用户。每个函数都只是完成单一而清晰的任务，可以使代码更加清晰易读。</p>
 
         
     </section>
