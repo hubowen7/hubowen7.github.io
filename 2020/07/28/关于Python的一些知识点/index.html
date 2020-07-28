@@ -10,7 +10,7 @@
     <title>关于Python的一些知识点 | 송하나的学习Blog</title>
     <meta name="author" content="Bowenhu7" />
     <meta name="keywords" content="" />
-    <meta name="description" content="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点关于继承的若干问题" />
+    <meta name="description" content="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点一本面向新手比较友好的书籍  关于继承的若干问题在编写类时，使用继承可以使子类自动获得父类的所有属性和方法，同时子类也可以定义自己的属性和方法。在此想记录两点关于子类继承父类时需要注意的问题（此处以父类Cat和子类WhiteCat为例）：  （1）在定义子类时，首先需要在子类的括号内指定父类的名称，并使用方法__init__()来接受创建父类实例的信息。同时需要使用super()函数来将父类和子类关联起来，具体的代..." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
@@ -139,9 +139,23 @@
     
     <section class="article-body markdown-body">
         
-        <h2 id="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"><a href="#在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点" class="headerlink" title="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"></a>在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点</h2><a id="more"></a>
+        <h2 id="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"><a href="#在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点" class="headerlink" title="在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点"></a>在学习书籍《Python编程：从入门到实践》时想记录下来的若干知识点</h2><p>一本面向新手比较友好的<a href="https://book.douban.com/subject/26829016/" target="_blank" rel="noopener">书籍</a>  </p>
+<a id="more"></a>
 
-<h3 id="关于继承的若干问题"><a href="#关于继承的若干问题" class="headerlink" title="关于继承的若干问题"></a>关于继承的若干问题</h3>
+<h3 id="关于继承的若干问题"><a href="#关于继承的若干问题" class="headerlink" title="关于继承的若干问题"></a>关于继承的若干问题</h3><p>在编写类时，使用继承可以使子类自动获得父类的所有属性和方法，同时子类也可以定义自己的属性和方法。在此想记录两点关于子类继承父类时需要注意的问题（此处以父类Cat和子类WhiteCat为例）：  </p>
+<p>（1）在定义子类时，首先需要在子类的括号内指定父类的名称，并使用方法<code>__init__()</code>来接受创建父类实例的信息。同时需要使用<code>super()</code>函数来将父类和子类关联起来，具体的代码示例如下：  </p>
+<pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">WhiteCat</span><span class="params">(Cat)</span>:</span>  
+     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, year, price)</span>:</span>  
+         super().__init__(year, price)    </code></pre>
+<p>此时子类WhiteCat包含父类的所有属性。（上述代码中为<code>year</code>和<code>price</code>）  </p>
+<p>（2）在子类定义自己的属性和方法时，可以对父类的方法进行重写，还是以上述的类为例，假设子类和父类中都有方法<code>buy_cat()</code>：  </p>
+<pre><code class="python"><span class="class"><span class="keyword">class</span> <span class="title">WhiteCat</span><span class="params">(Cat)</span>:</span>  
+     --snip--
+
+     <span class="function"><span class="keyword">def</span> <span class="title">buy_cat</span><span class="params">(self)</span>:</span>
+         print(<span class="string">'A WhiteCat is more expensive than a normal cat'</span>)  </code></pre>
+<p>此时如果有人对白猫调用方法<code>buy_cat()</code>，Python将忽略父类中的该方法，转而使用子类中的该方法。</p>
+
         
     </section>
 </article>
