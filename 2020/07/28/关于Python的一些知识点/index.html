@@ -207,7 +207,7 @@ greet_user()  </code></pre>
          print(<span class="string">"We'll remember you when you come back,"</span> + username + <span class="string">"!"</span>)
 
 greet_user()</code></pre>
-<p>重构之后的代码之中，第一个<code>get_stored_username()</code>之中，如果存储了用户名，这个函数就会获取该用户名并将返回值设为该用户名；如果文件<code>username.json</code>不存在，这个函数就返回<code>None</code>。第二个函数可以提示用户输入用户名，此函数只负责获取并存储新用户的用户名。当我们调用最后一个函数时，该函数要么调用函数<code>get_stored_username()</code>欢迎老用户回来，要么调用第二个函数<code>get_new_username()</code>问候新用户。每个函数都只是完成单一而清晰的任务，可以使代码更加清晰易读。</p>
+<p>重构之后的代码之中，第一个<code>get_stored_username()</code>之中，如果存储了用户名，这个函数就会获取该用户名并将返回值设为该用户名；如果文件<code>username.json</code>不存在，这个函数就返回<code>None</code>。第二个函数可以提示用户输入用户名，此函数只负责获取并存储新用户的用户名。当我们调用最后一个函数时，该函数要么调用函数第一个函数欢迎老用户回来，要么调用第二个函数<code>get_new_username()</code>问候新用户。每个函数都只是完成单一而清晰的任务，可以使代码更加清晰易读。</p>
 
         
     </section>
